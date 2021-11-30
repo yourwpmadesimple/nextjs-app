@@ -15,10 +15,9 @@ const everydayPack = new Backpack(
   26,
   false,
   'December 5, 2018 15:00:00 PST',
-  '../../project_2/assests/images/everyday.svg',
+  '../../project_3/assests/images/everyday.svg',
 );
 
-let main = document.querySelector('.maincontent');
 const content = `
    <article class="backpack" id="everyday">
      <figure class="backpack__image">
@@ -32,7 +31,7 @@ const content = `
        <li class="packprop backpack__color">Color:<span> ${
          everydayPack.color
        }</span></li>
-       <li class="packprop backpack__age">Age:<span> ${everydayPack.backpackAge()} days old</span></li>
+       <li class="backpack__age">Age:<span> ${everydayPack.backpackAge()} days old</span></li>
        <li class="packprop backpack__pockets">Number of pockets:<span> ${
          everydayPack.pocketNum
        }</span></li>
@@ -49,5 +48,6 @@ const content = `
    </article>
  `;
 
-// Targeting Dom Elements
+const main = document.querySelector('.maincontent');
+
 main.innerHTML = content;
